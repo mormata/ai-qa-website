@@ -1,0 +1,36 @@
+/* 修复侧边栏的一些样式问题 */
+
+/* 侧边栏折叠时的样式增强 */
+.sidebar.collapsed .sidebar-content {
+  display: none;
+}
+
+/* 折叠按钮样式增强 */
+.toggle-sidebar-btn {
+  z-index: 100;
+}
+
+/* 确保侧边栏内容在非折叠状态正常显示 */
+.sidebar:not(.collapsed) .sidebar-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+/* 折叠状态下仅显示图标的按钮 */
+.sidebar.collapsed .new-chat-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.sidebar.collapsed .toggle-sidebar-btn {
+  right: -12px;
+  top: 20px;
+}
